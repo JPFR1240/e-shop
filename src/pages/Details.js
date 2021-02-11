@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 import { addProduct } from "../actions/ProductsActions";
 import { Navbar } from "../components/views/Navbar";
-import { getProducts } from "../helpers/getProducts";
-import { getProductsbyId } from "../helpers/getProductsbyId";
 import { useFetchProduct } from "../hooks/useFetchProduct";
 
 export const Details = () => {
@@ -14,6 +13,7 @@ export const Details = () => {
   const { data: product } = useFetchProduct(id);
   const handleAdd = (product) => {
     dispatch(addProduct(product));
+    Swal.fire("Proceso exitoso", "El producto se agregó al carrito", "success");
   };
   return (
     <div className="container-fluid">

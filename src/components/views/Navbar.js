@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   const { products: addedProducts } = useSelector((state) => state.Car);
@@ -19,7 +19,8 @@ export const Navbar = () => {
             exact
             to="/"
           >
-            Productos
+            <i class="fas fa-align-justify"></i>
+            <span> Productos</span>
           </NavLink>
         </ul>
       </div>
@@ -39,13 +40,15 @@ export const Navbar = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Added{" "}
+              <i class="fas fa-shopping-cart"></i>
+              <span> Added</span>
               <span className="badge bg-secondary">{addedProducts.length}</span>
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              {addedProducts.map((oneProduct) => {
-                <li>{oneProduct.added.title}-{oneProduct.added.price}</li>;
+              {addedProducts.map((oneProduct, i) => {
+                <li>{oneProduct}</li>;
               })}
+              <li>adasd</li>
             </ul>
           </div>
           {/* </NavLink> */}

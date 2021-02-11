@@ -1,14 +1,15 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import { addProduct } from "../../actions/ProductsActions";
-import { getProductsbyId } from "../../helpers/getProductsbyId";
 
 export const Card = ({ product }) => {
   const dispatch = useDispatch();
 
   const handleAdd = (product) => {
     dispatch(addProduct(product));
+    Swal.fire('Proceso exitoso', 'El producto se agregó al carrito','success');
   };
 
   return (
