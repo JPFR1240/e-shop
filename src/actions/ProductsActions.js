@@ -13,3 +13,5 @@ export const showProducts = ({ products }) => ({
     products,
   },
 });
+
+/* Acciones del producto donde se podra añadir uno y visualizar todos */

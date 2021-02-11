@@ -15,3 +15,5 @@ export const getProducts = async () => {
   
   return products;
 };
+
+/* helper para poder obtener todos los productos */

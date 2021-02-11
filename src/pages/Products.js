@@ -7,7 +7,7 @@ export const Products = () => {
   const { data: products } = useFetchProducts();
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid p-0">
       <Navbar />
       <div className="row">
         {products.map((product) => (
@@ -19,3 +19,5 @@ export const Products = () => {
     </div>
   );
 };
+
+/* Página donde se visualiza la lista de productos */

@@ -15,3 +15,5 @@ export default function AppRouters() {
     </Router>
   );
 }
+
+/* Solo se usan 2 rutas, la raíz con la lista completa de productos y la específica con los detalles de éste */

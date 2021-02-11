@@ -16,3 +16,5 @@ export const useFetchProduct = (id) => {
   }, []);
   return state;
 };
+
+/* hook que ayuda en la obtención de la data de un producto y permite visualziarla en un array*/

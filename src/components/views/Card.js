@@ -33,3 +33,5 @@ export const Card = ({ product }) => {
     </div>
   );
 };
+
+/* Componente que genera y llena el card con los datos pasados por props */

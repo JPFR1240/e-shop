@@ -5,3 +5,4 @@ export const getProductsbyId = async (id) => {
     return product;
   };
   
+  /* Helper que retorna un producto en base al id */

@@ -13,3 +13,5 @@ export const store = createStore(
     applyMiddleware(thunk)
   )
 );
+
+/* Por un momento se pensó utilizar thunk para realizar peticiones asíncronas con redux pero no fue necesario */

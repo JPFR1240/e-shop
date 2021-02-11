@@ -15,3 +15,5 @@ export const useFetchProducts = () => {
   }, []);
   return state;
 };
+
+/* Hook que ayuda en la obtención de la data de todos los productos y facilita su visualización */

@@ -57,3 +57,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+/* Componente que genera el navbar y gestiona el carrito */

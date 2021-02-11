@@ -16,7 +16,7 @@ export const Details = () => {
     Swal.fire("Proceso exitoso", "El producto se agregó al carrito", "success");
   };
   return (
-    <div className="container-fluid">
+    <div className="container-fluid p-0">
       <Navbar />
       <div className="row">
         <img
@@ -41,3 +41,5 @@ export const Details = () => {
     </div>
   );
 };
+
+/* Página donde está esta la información detallada del producto seleccionado */
