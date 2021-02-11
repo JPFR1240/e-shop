@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../helpers/getProducts";
+import { getProductsbyId } from "../helpers/getProductsbyId";
 
-export const useFetchProducts = () => {
+export const useFetchProduct = (id) => {
   const [state, setstate] = useState({
     data: [],
   });
 
   useEffect(() => {
-    getProducts().then((product) => {
+    getProductsbyId(id).then((product) => {
       setstate({
         data: product,
       });

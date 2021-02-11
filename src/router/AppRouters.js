@@ -9,7 +9,7 @@ export default function AppRouters() {
       <div>
         <Switch>
           <Route path="/" exact component={Products} />
-          <Route path="/details"  exact component={Details} />
+          <Route path="/details/:id"  exact component={Details} />
         </Switch>
       </div>
     </Router>

@@ -1,9 +1,9 @@
 import { types } from "../types/types";
 
-export const addProduct = (product) => ({
+export const addProduct = (added) => ({
   type: types.addProduct,
   payload: {
-    product
+    added
   },
 });
 

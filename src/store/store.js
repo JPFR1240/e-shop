@@ -4,7 +4,7 @@ import { ProductReducer } from "../reducers/ProductReducer";
 
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 const reducers = combineReducers({
-  Added: ProductReducer
+  Car: ProductReducer
 });
 
 export const store = createStore(
