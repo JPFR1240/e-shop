@@ -13,8 +13,5 @@ export const getProducts = async () => {
     };
   });
   
-  products.map( product => {
-      console.log(product.image)
-  } )
   return products;
 };
