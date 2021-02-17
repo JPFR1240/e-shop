@@ -1,7 +1,8 @@
-import { types } from "../types/types";
+import { types } from "../../types/types";
 
 const initialState = {
   products: [],
+  load: null,
 };
 
 export const ProductReducer = (state = initialState, action) => {
@@ -11,9 +12,17 @@ export const ProductReducer = (state = initialState, action) => {
         ...state,
         products: [...state.products, action.payload],
       };
+
+    case types.loading:
+      return {
+        ...state,
+        load: {
+          ...action.payload,
+        },
+      };
     default:
       return state;
   }
 };
 
-/* reducer del producto */
+/* reducer del productos */

@@ -2,9 +2,9 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-import { addProduct } from "../actions/ProductsActions";
 import { Navbar } from "../components/views/Navbar";
 import { useFetchProduct } from "../hooks/useFetchProduct";
+import { addProduct } from "../redux/actions/ProductsActions";
 
 export const Details = () => {
   const { id } = useParams();

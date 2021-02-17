@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import { addProduct } from "../../actions/ProductsActions";
+import { addProduct } from "../../redux/actions/ProductsActions";
 
 export const Card = ({ product }) => {
   const dispatch = useDispatch();
@@ -13,9 +13,9 @@ export const Card = ({ product }) => {
   };
 
   return (
-    <div className="card my-3" style={{ maxWidth: "15rem" }}>
+    <div className="card my-3 div-img d-flex align-items-center" style={{ maxWidth: "15rem" }}>
       <Link to={`/details/${product.id}`}>
-        <img src={product.image} className="card-img-top" alt="..." />
+        <img src={product.image} className="card-img-top myimg" alt="..." />
       </Link>
       <div className="card-body">
         <h5 className="card-title">{product.title}</h5>

@@ -1,0 +1,12 @@
+.myimg {
+  width: 10rem;
+  height: 14rem;
+  padding: 10px;
+}
+
+.div-img {
+  max-width: 15rem;
+  height: 29rem;
+  align-items: center;
+  border: 5px solid blue;
+}
