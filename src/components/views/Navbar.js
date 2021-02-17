@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   const { products: addedProducts } = useSelector((state) => state.Car);
-  console.log(addedProducts);
+  /* console.log(addedProducts); */
 
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -19,7 +19,7 @@ export const Navbar = () => {
             exact
             to="/"
           >
-            <i class="fas fa-align-justify"></i>
+            <i className="fas fa-align-justify"></i>
             <span> Productos</span>
           </NavLink>
         </ul>
@@ -40,7 +40,7 @@ export const Navbar = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="fas fa-shopping-cart"></i>
+              <i className="fas fa-shopping-cart"></i>
               <span> Added</span>
               <span className="badge bg-secondary">{addedProducts.length}</span>
             </button>
