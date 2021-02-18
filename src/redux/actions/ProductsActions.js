@@ -1,4 +1,4 @@
-import { types } from "../../types/types";
+import { types } from "../types/types";
 
 export const addProduct = (added) => ({
   type: types.addProduct,

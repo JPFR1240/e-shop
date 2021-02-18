@@ -12,7 +12,7 @@ export const Products = () => {
   return (
     <div className="container-fluid p-0">
       <Navbar />
-      <div className="row">
+      <div className="row div-center">
         {products.map((product) => (
           <div className="col-12 col-sm-10 col-md-4 col-xl-3" key={product.id}>
             {load ? <Card product={product} /> : <Spinner />}

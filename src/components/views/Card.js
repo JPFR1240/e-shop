@@ -9,11 +9,11 @@ export const Card = ({ product }) => {
 
   const handleAdd = (product) => {
     dispatch(addProduct(product));
-    Swal.fire('Proceso exitoso', 'El producto se agregó al carrito','success');
+    Swal.fire("Proceso exitoso", "El producto se agregó al carrito", "success");
   };
 
   return (
-    <div className="card my-3 div-img d-flex align-items-center" style={{ maxWidth: "15rem" }}>
+    <div className="card my-3 div-img d-flex align-items-center">
       <Link to={`/details/${product.id}`}>
         <img src={product.image} className="card-img-top myimg" alt="..." />
       </Link>
