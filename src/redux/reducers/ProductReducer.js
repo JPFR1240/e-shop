@@ -2,7 +2,7 @@ import { types } from "../types/types";
 
 const initialState = {
   products: [],
-  load: true,
+  loading: false,
 };
 
 export const ProductReducer = (state = initialState, action) => {
@@ -16,7 +16,7 @@ export const ProductReducer = (state = initialState, action) => {
     case types.loading:
       return {
         ...state,
-        load: {
+        loading: {
           ...action.payload,
         },
       };
