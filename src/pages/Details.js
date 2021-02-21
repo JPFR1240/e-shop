@@ -15,7 +15,7 @@ export const Details = () => {
   const { data: product } = useFetchProduct(id);
   const handleAdd = (product) => {
     dispatch(addProduct(product));
-    Swal.fire("Proceso exitoso", "El producto se agregó al carrito", "success");
+    /* Swal.fire("Proceso exitoso", "El producto se agregó al carrito", "success"); */
   };
   return (
     <div className="container-fluid p-0">

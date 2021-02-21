@@ -2,7 +2,6 @@ import { types } from "../types/types";
 
 const initialState = {
   products: [],
-  loading: false,
 };
 
 export const ProductReducer = (state = initialState, action) => {
@@ -13,13 +12,6 @@ export const ProductReducer = (state = initialState, action) => {
         products: [...state.products, action.payload],
       };
 
-    case types.loading:
-      return {
-        ...state,
-        loading: {
-          ...action.payload,
-        },
-      };
     default:
       return state;
   }

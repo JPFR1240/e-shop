@@ -7,7 +7,7 @@ import { useFetchProducts } from "../hooks/useFetchProducts";
 
 export const Products = () => {
   const { data: products } = useFetchProducts();
-  const { loading } = useSelector((state) => state.Car);
+  const { loading } = useSelector((state) => state.ui);
   console.log(loading);
   return (
     <div className="container-fluid p-0">

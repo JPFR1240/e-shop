@@ -14,3 +14,8 @@
 .div-center {
   text-align: -webkit-center;
 }
+
+.bg {
+  background-color: #bcbca4;
+  width: -webkit-fill-available;
+}

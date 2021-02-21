@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
-  const { products: addedProducts } = useSelector((state) => state.Car);
+  const { products: addedProducts } = useSelector((state) => state.car);
   /* console.log(addedProducts); */
 
   return (
