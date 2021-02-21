@@ -8,14 +8,16 @@ import { useFetchProducts } from "../hooks/useFetchProducts";
 export const Products = () => {
   const { data: products } = useFetchProducts();
   const { loading } = useSelector((state) => state.ui);
-  console.log(loading);
+  /* console.log(loading); */
+  /* const { products: arrayProducts } = useSelector(state => state.car)
+  console.log(arrayProducts); */
   return (
     <div className="container-fluid p-0">
       <Navbar />
       <div className="row div-center">
         {products.map((product) => (
           <div className="col-12 col-sm-10 col-md-4 col-xl-3" key={product.id}>
-            {!loading ? <Card product={product} /> : <Spinner />}
+            {loading === false ? <Card product={product} /> : <Spinner />}
           </div>
         ))}
       </div>

@@ -10,7 +10,7 @@ import { addProduct } from "../redux/actions/ProductsActions";
 export const Details = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { load } = useSelector((state) => state.Car);
+  const { load: loading } = useSelector((state) => state.car);
 
   const { data: product } = useFetchProduct(id);
   const handleAdd = (product) => {
@@ -21,7 +21,7 @@ export const Details = () => {
     <div className="container-fluid p-0">
       <Navbar />
       <div className="row p-3">
-        {load ? (
+        {loading === false ? (
           <img
             src={product.image}
             className="img col-4 img-fluid mx-5 my-3"

@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
-  const { products: addedProducts } = useSelector((state) => state.car);
-  /* console.log(addedProducts); */
+  const { products: arrayProducts } = useSelector((state) => state.car);
+  console.log(arrayProducts);
 
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -42,13 +42,12 @@ export const Navbar = () => {
             >
               <i className="fas fa-shopping-cart"></i>
               <span> Added</span>
-              <span className="badge bg-secondary">{addedProducts.length}</span>
+              <span className="badge bg-secondary">{arrayProducts.length}</span>
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              {addedProducts.map((oneProduct, i) => {
-                <li>{oneProduct}</li>;
+              {arrayProducts.map((oneProduct, i) => {
+                return <li key={i}>{i+1}-{oneProduct.product.title}</li>;
               })}
-              <li>adasd</li>
             </ul>
           </div>
           {/* </NavLink> */}

@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { getProducts } from "../helpers/getProducts";
+import { endLoading, startLoading } from "../redux/actions/uiActions";
 
 export const useFetchProducts = () => {
   const [state, setstate] = useState({
     data: [],
   });
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    getProducts().then((product) => {
-      setstate({
-        data: product,
-      });
-    });
+  useEffect(async () => {
+    dispatch(startLoading());
+    getProducts()
+      .then((product) => {
+        setstate({
+          data: product,
+        });
+      })
+      .then(dispatch(endLoading()));
   }, []);
   return state;
 };
