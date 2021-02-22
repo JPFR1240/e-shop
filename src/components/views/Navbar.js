@@ -46,7 +46,7 @@ export const Navbar = () => {
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               {arrayProducts.map((oneProduct, i) => {
-                return <li key={i}>{i+1}-{oneProduct.product.title}</li>;
+                return <li key={i}>{i+1}.- {oneProduct.product.title} - {oneProduct.product.price}</li>;
               })}
             </ul>
           </div>

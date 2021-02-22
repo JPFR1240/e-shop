@@ -10,7 +10,7 @@ import { addProduct } from "../redux/actions/ProductsActions";
 export const Details = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { load: loading } = useSelector((state) => state.car);
+  const { loading } = useSelector((state) => state.ui);
 
   const { data: product } = useFetchProduct(id);
   const handleAdd = (product) => {

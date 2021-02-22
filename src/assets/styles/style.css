@@ -9,6 +9,7 @@
   height: 29rem;
   align-items: center;
   border: 5px solid blue;
+  border-style: double;
 }
 
 .div-center {
@@ -19,3 +20,20 @@
   background-color: #bcbca4;
   width: -webkit-fill-available;
 }
+/* 
+.fr {
+}
+
+.fr:hover {
+  transform: rotateY(-180dg);
+}
+
+.bc {
+  background-color: #fff;
+  transform: rotateY(180dg);
+}
+
+.bc:hover {
+  transform: rotateY(0);
+}
+ */
