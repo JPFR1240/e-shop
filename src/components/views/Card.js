@@ -1,22 +1,28 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
 import { addProduct } from "../../redux/actions/ProductsActions";
 
 export const Card = ({ product }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleAdd = (product) => {
     dispatch(addProduct(product));
     /* Swal.fire("Proceso exitoso", "El producto se agregó al carrito", "success"); */
   };
 
+  const handleImg = () => {
+    console.log(product.id);
+    history.push(`/details/${product.id}`);
+  };
+
   return (
     <div className="card my-3 div-img d-flex">
-      <Link to={`/details/${product.id}`}>
+      <div className="div-redirect" onClick={handleImg}>
         <img src={product.image} className="card-img-top myimg" alt="..." />
-      </Link>
+      </div>
       <div className="card-body bg">
         <h5 className="card-title">{product.title}</h5>
         <div className="row">

@@ -20,6 +20,10 @@
   background-color: #bcbca4;
   width: -webkit-fill-available;
 }
+
+.div-redirect{
+  cursor: pointer;
+}
 /* 
 .fr {
 }

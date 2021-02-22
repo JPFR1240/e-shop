@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   const { products: arrayProducts } = useSelector((state) => state.car);
-  console.log(arrayProducts);
+  /* console.log(arrayProducts); */
 
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
