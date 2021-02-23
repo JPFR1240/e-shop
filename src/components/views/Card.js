@@ -20,10 +20,11 @@ export const Card = ({ product }) => {
 
   return (
     <div className="card my-3 div-img d-flex">
-      <div className="div-redirect" onClick={handleImg}>
-        <img src={product.image} className="card-img-top myimg" alt="..." />
+      <div className="div-redirect card__side card__side--front" onClick={handleImg}>
+        {/* <img src={product.image} className="card-img-top myimg" alt="..." /> */}
+        <img src={product.image} className="card-img-top" alt="..." />
       </div>
-      <div className="card-body bg">
+      <div className="card-body bg card__side card__side--back">
         <h5 className="card-title">{product.title}</h5>
         <div className="row">
           <span className="col">Price: {product.price}</span>

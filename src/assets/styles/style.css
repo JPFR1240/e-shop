@@ -10,6 +10,11 @@
   align-items: center;
   border: 5px solid blue;
   border-style: double;
+  transition: 0.6s ease-in-out;
+}
+
+.div-img:hover {
+  transform: rotateY(180deg);
 }
 
 .div-center {
@@ -21,8 +26,26 @@
   width: -webkit-fill-available;
 }
 
-.div-redirect{
+.div-redirect {
   cursor: pointer;
+}
+
+.example {
+  width: 50%;
+  margin: auto;
+  ;
+}
+
+.example:hover {
+  background-color: blueviolet;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.example-back {
+  width: 50%;
+  margin: auto;
+  display: none;
 }
 /* 
 .fr {
